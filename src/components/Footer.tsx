@@ -70,12 +70,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/kontakt"
+                <a
+                  href="mailto:raphael@meinsesam.de"
                   className="text-ocean-400 hover:text-white transition-colors text-sm"
                 >
                   Kontakt
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
