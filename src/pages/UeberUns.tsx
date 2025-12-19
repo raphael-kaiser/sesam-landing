@@ -91,9 +91,11 @@ export function UeberUns() {
                   </p>
                   
                   <div className="pt-6 border-t border-sand-100 mt-8">
-                    <p className="text-ocean-900 font-semibold mb-1">
-                      Raphael & Carlos
-                    </p>
+                    <img 
+                      src="/signature.png" 
+                      alt="Signatur Raphael & Carlos" 
+                      className="h-16 mb-2"
+                    />
                     <p className="text-ocean-500 text-base">
                       Gründer von Sesam
                     </p>
