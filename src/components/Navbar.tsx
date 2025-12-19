@@ -38,11 +38,12 @@ export function Navbar() {
     >
       <div className="container-max section-padding !py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-sage-500 to-sage-600 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
-            </div>
-            <span className="text-xl font-semibold text-ocean-900">Sesam</span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/sesam-logo.svg" 
+              alt="Sesam" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
