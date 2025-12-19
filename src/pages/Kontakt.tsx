@@ -1,8 +1,11 @@
-import { Mail, MapPin, Phone, MessageCircle, Shield, Headphones } from 'lucide-react'
+import { Mail, Phone, MessageCircle, Clock, ChevronRight } from 'lucide-react'
+
+const CALENDLY_URL = 'https://calendly.com/raphaelkaiser/20min'
 
 export function Kontakt() {
   return (
     <div className="pt-24">
+      {/* Hero */}
       <section className="relative">
         <div className="organic-shape w-96 h-96 bg-ocean-200 top-20 -right-20" />
         <div className="organic-shape w-64 h-64 bg-sage-300 bottom-10 -left-10" />
@@ -15,134 +18,103 @@ export function Kontakt() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-bold text-ocean-900 mb-6 leading-tight">
-              Wir sind <span className="text-sage-600">für Sie da.</span>
+              Sprechen Sie direkt mit dem{' '}
+              <span className="text-sage-600">Gründer.</span>
             </h1>
 
             <p className="text-xl text-ocean-600 leading-relaxed">
-              Haben Sie Fragen zu Sesam? Wir helfen Ihnen gerne weiter.
+              Keine Warteschleifen, keine Support-Tickets. Bei Sesam erreichen Sie 
+              direkt die Menschen, die das Produkt bauen.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="relative gradient-soft">
-        <div className="container-max section-padding">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-white rounded-3xl p-8 shadow-sm border border-sand-100 text-center hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-sage-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Mail className="w-7 h-7 text-sage-700" />
+      {/* Contact Options */}
+      <section className="relative">
+        <div className="container-max section-padding !pt-8">
+          <div className="max-w-2xl mx-auto">
+            {/* Main Contact Card */}
+            <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-sand-100 mb-8">
+              <div className="text-center mb-8">
+                <div className="w-20 h-20 bg-gradient-to-br from-sage-200 to-sage-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-sage-700">R</span>
                 </div>
-                <h3 className="text-lg font-semibold text-ocean-900 mb-2">
-                  Allgemeine Anfragen
-                </h3>
-                <p className="text-ocean-600 text-sm mb-4">
-                  Für alle Fragen rund um Sesam
-                </p>
-                <a
-                  href="mailto:hallo@meinsesam.de"
-                  className="text-sage-600 font-medium hover:text-sage-700 transition-colors"
+                <h2 className="text-2xl font-bold text-ocean-900 mb-1">
+                  Raphael Kaiser
+                </h2>
+                <p className="text-ocean-600">Gründer von Sesam</p>
+              </div>
+
+              <div className="space-y-4">
+                {/* Phone */}
+                <a 
+                  href="tel:+4915772863455"
+                  className="flex items-center gap-4 p-4 bg-sage-50 rounded-2xl hover:bg-sage-100 transition-colors group"
                 >
-                  hallo@meinsesam.de
-                </a>
-              </div>
-
-              <div className="bg-white rounded-3xl p-8 shadow-sm border border-sand-100 text-center hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-ocean-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Headphones className="w-7 h-7 text-ocean-700" />
-                </div>
-                <h3 className="text-lg font-semibold text-ocean-900 mb-2">
-                  Support & Sicherheit
-                </h3>
-                <p className="text-ocean-600 text-sm mb-4">
-                  Technische Hilfe & Datenschutzanfragen
-                </p>
-                <a
-                  href="mailto:hilfe@meinsesam.de"
-                  className="text-ocean-600 font-medium hover:text-ocean-700 transition-colors"
-                >
-                  hilfe@meinsesam.de
-                </a>
-              </div>
-
-              <div className="bg-white rounded-3xl p-8 shadow-sm border border-sage-200 text-center hover:shadow-lg transition-shadow relative overflow-hidden">
-                <div className="absolute top-3 right-3 bg-sage-100 rounded-full px-2 py-1 text-xs font-medium text-sage-700">
-                  Direkt
-                </div>
-                <div className="w-14 h-14 bg-sand-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-7 h-7 text-sand-700" />
-                </div>
-                <h3 className="text-lg font-semibold text-ocean-900 mb-2">
-                  Gründer-Direktkontakt
-                </h3>
-                <p className="text-ocean-600 text-sm mb-4">
-                  Feedback direkt an den Gründer
-                </p>
-                <a
-                  href="mailto:raphael@meinsesam.de"
-                  className="text-sand-700 font-medium hover:text-sand-800 transition-colors"
-                >
-                  raphael@meinsesam.de
-                </a>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-sand-100 max-w-xl mx-auto">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-ocean-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-ocean-700" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-ocean-900 mb-3">
-                    Postanschrift
-                  </h3>
-                  <address className="text-ocean-600 not-italic leading-relaxed">
-                    Sesam GmbH i.G.
-                    <br />
-                    Musterstraße 12
-                    <br />
-                    10115 Berlin
-                    <br />
-                    Deutschland
-                  </address>
-                </div>
-              </div>
-
-              <div className="border-t border-sand-100 mt-6 pt-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-sage-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-sage-200 rounded-xl flex items-center justify-center group-hover:bg-sage-300 transition-colors">
                     <Phone className="w-6 h-6 text-sage-700" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-ocean-900 mb-1">
-                      Telefon
-                    </h3>
-                    <a
-                      href="tel:+493012345678"
-                      className="text-ocean-600 hover:text-sage-600 transition-colors"
-                    >
-                      +49 (0) 30 12345678
-                    </a>
+                  <div className="flex-1">
+                    <div className="font-semibold text-ocean-900">Telefon</div>
+                    <div className="text-ocean-600">01577 2863455</div>
                   </div>
+                  <ChevronRight className="w-5 h-5 text-ocean-400" />
+                </a>
+
+                {/* Email */}
+                <a 
+                  href="mailto:raphael@meinsesam.de"
+                  className="flex items-center gap-4 p-4 bg-ocean-50 rounded-2xl hover:bg-ocean-100 transition-colors group"
+                >
+                  <div className="w-12 h-12 bg-ocean-200 rounded-xl flex items-center justify-center group-hover:bg-ocean-300 transition-colors">
+                    <Mail className="w-6 h-6 text-ocean-700" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-ocean-900">E-Mail</div>
+                    <div className="text-ocean-600">raphael@meinsesam.de</div>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-ocean-400" />
+                </a>
+              </div>
+            </div>
+
+            {/* Response Promise */}
+            <div className="bg-sage-50 rounded-2xl p-6 border border-sage-100 mb-8">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 bg-sage-200 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-sage-700" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-ocean-900 mb-1">
+                    Unser Versprechen
+                  </h3>
+                  <p className="text-ocean-700 leading-relaxed">
+                    Wir antworten auf jede Nachricht innerhalb von{' '}
+                    <strong className="text-sage-700">12 Stunden</strong> – 
+                    auch an Wochenenden und Feiertagen.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="relative">
-        <div className="container-max section-padding">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-sage-50 rounded-3xl p-8 border border-sage-100">
+            {/* Demo CTA */}
+            <div className="bg-gradient-to-br from-sand-100 to-sand-50 rounded-2xl p-8 text-center border border-sand-200">
               <h3 className="text-xl font-semibold text-ocean-900 mb-3">
-                Unser Versprechen
+                Lieber direkt zeigen lassen?
               </h3>
-              <p className="text-ocean-600 leading-relaxed">
-                Wir antworten auf alle Anfragen innerhalb von{' '}
-                <strong className="text-sage-700">24 Stunden</strong> an
-                Werktagen. Ihr Anliegen ist uns wichtig.
+              <p className="text-ocean-600 mb-6">
+                Buchen Sie einen kostenlosen Demo-Termin und erleben Sie Sesam live.
               </p>
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center gap-2"
+              >
+                Demo-Termin vereinbaren
+                <ChevronRight className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -150,4 +122,3 @@ export function Kontakt() {
     </div>
   )
 }
-

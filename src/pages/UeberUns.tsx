@@ -1,8 +1,11 @@
-import { Heart, Shield, Users, Sparkles } from 'lucide-react'
+import { Heart, Shield, Sparkles, ChevronRight } from 'lucide-react'
+
+const CALENDLY_URL = 'https://calendly.com/raphaelkaiser/20min'
 
 export function UeberUns() {
   return (
     <div className="pt-24">
+      {/* Hero - The Story */}
       <section className="relative">
         <div className="organic-shape w-96 h-96 bg-sand-300 top-20 -right-20" />
         <div className="organic-shape w-64 h-64 bg-sage-300 bottom-10 -left-10" />
@@ -17,80 +20,92 @@ export function UeberUns() {
             <h1 className="text-4xl sm:text-5xl font-bold text-ocean-900 mb-8 leading-tight">
               Warum wir Sesam <span className="text-sage-600">gebaut haben.</span>
             </h1>
-
-            <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-lg shadow-ocean-900/5 border border-sand-100">
-              <p className="text-xl text-ocean-700 leading-relaxed mb-6">
-                Wir haben gesehen, wie exzellente Therapeuten unter der Last der
-                Dokumentation ausbrennen.
-              </p>
-              <p className="text-xl text-ocean-700 leading-relaxed mb-6">
-                <strong className="text-ocean-900">
-                  Therapie sollte bedeuten: Da sein für den Menschen.
-                </strong>
-                <br />
-                Nicht: Da sein für das Papier.
-              </p>
-              <p className="text-lg text-sage-700 font-medium">
-                Sesam ist unsere Antwort auf die Frage: „Wie kann Technik wieder
-                dem Menschen dienen?"
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="relative gradient-soft">
-        <div className="container-max section-padding">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-ocean-100 rounded-full text-ocean-700 text-sm font-medium mb-6">
-              <Users className="w-4 h-4" />
-              <span>Das Team</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-4">
-              Menschen, die verstehen
-            </h2>
-            <p className="text-lg text-ocean-600 max-w-2xl mx-auto">
-              Ein kleines Team mit großer Mission.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-sand-100 text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-sage-200 to-sage-300 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-3xl font-bold text-sage-700">R</span>
+      {/* Letter-style Content (Every-inspired) */}
+      <section className="relative">
+        <div className="container-max px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
+          <div className="max-w-2xl mx-auto">
+            <article className="prose prose-lg prose-ocean">
+              <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-sand-100">
+                <div className="space-y-6 text-ocean-700 leading-relaxed text-lg">
+                  <p>
+                    Liebe Therapeutinnen, liebe Therapeuten,
+                  </p>
+                  
+                  <p>
+                    Sie verbringen Ihre Tage damit, anderen Menschen zu helfen. Sie hören zu. 
+                    Sie halten den Raum. Sie tragen die Geschichten von Menschen, die sonst 
+                    niemanden haben, dem sie sich anvertrauen können.
+                  </p>
+                  
+                  <p>
+                    Und dann, wenn Ihre letzte Patientin gegangen ist, beginnt die 
+                    <em> andere</em> Arbeit. Die Dokumentation. Die Arztbriefe. Die Anträge.
+                  </p>
+                  
+                  <p>
+                    Wir haben gesehen, wie exzellente Therapeuten unter dieser Last ausbrennen. 
+                    Wie sie abends um acht noch am Schreibtisch sitzen, während ihre eigenen 
+                    Familien auf sie warten. Wie die Bürokratie ihnen die Energie raubt, die sie 
+                    eigentlich für ihre Patienten bräuchten.
+                  </p>
+                  
+                  <p className="text-ocean-900 font-medium">
+                    Das ist nicht richtig.
+                  </p>
+                  
+                  <p>
+                    Therapie sollte bedeuten: Da sein für den Menschen.
+                    <br />
+                    Nicht: Da sein für das Papier.
+                  </p>
+                  
+                  <p>
+                    Sesam ist unsere Antwort auf eine einfache Frage: <em>Wie kann Technologie 
+                    wieder dem Menschen dienen?</em>
+                  </p>
+                  
+                  <p>
+                    Wir bauen kein weiteres Tool, das Sie lernen müssen. Wir bauen einen 
+                    unsichtbaren Begleiter, der Ihnen die Last abnimmt – damit Sie Ihre 
+                    Abende wieder haben. Damit Sie die Energie haben für das, was wirklich 
+                    zählt.
+                  </p>
+                  
+                  <p>
+                    Wir wissen, dass Vertrauen in der Psychotherapie alles ist. Deshalb stehen 
+                    unsere Server in Deutschland. Deshalb werden Ihre Daten niemals für 
+                    KI-Training verwendet. Deshalb ist bei uns Datenschutz keine Checkbox, 
+                    sondern Überzeugung.
+                  </p>
+                  
+                  <p>
+                    Wer anderen hilft, verdient selbst Unterstützung.
+                  </p>
+                  
+                  <p className="text-ocean-900 font-medium">
+                    Dafür stehen wir. Jeden Tag.
+                  </p>
+                  
+                  <div className="pt-6 border-t border-sand-100 mt-8">
+                    <p className="text-ocean-900 font-semibold mb-1">
+                      Raphael & Carlos
+                    </p>
+                    <p className="text-ocean-500 text-base">
+                      Gründer von Sesam
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-ocean-900 mb-1">
-                Raphael
-              </h3>
-              <div className="text-sage-600 font-medium mb-4">
-                Gründer & Produkt
-              </div>
-              <p className="text-ocean-600 text-sm leading-relaxed">
-                Entwickelt Software, die den Rücken freihält. Glaubt daran, dass
-                Technologie dem Menschen dienen sollte – nicht umgekehrt.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-sand-100 text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-ocean-200 to-ocean-300 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-3xl font-bold text-ocean-700">Dr.</span>
-              </div>
-              <h3 className="text-xl font-bold text-ocean-900 mb-1">
-                Dr. med. [Name]
-              </h3>
-              <div className="text-ocean-600 font-medium mb-4">
-                Advisory Board
-              </div>
-              <p className="text-ocean-600 text-sm leading-relaxed">
-                Psychologische Aufsicht & Qualitätssicherung. Sorgt dafür, dass
-                Sesam den Anforderungen der Praxis gerecht wird.
-              </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
+      {/* Values Section */}
       <section className="relative">
         <div className="container-max section-padding">
           <div className="max-w-3xl mx-auto">
@@ -142,18 +157,27 @@ export function UeberUns() {
         </div>
       </section>
 
+      {/* Mission Statement */}
       <section className="relative gradient-soft">
         <div className="container-max section-padding">
           <div className="max-w-2xl mx-auto text-center">
             <Sparkles className="w-12 h-12 text-sage-500 mx-auto mb-6" />
-            <blockquote className="text-2xl sm:text-3xl font-medium text-ocean-900 leading-relaxed">
+            <blockquote className="text-2xl sm:text-3xl font-medium text-ocean-900 leading-relaxed mb-8">
               „Wer anderen hilft, verdient selbst Unterstützung."
             </blockquote>
-            <p className="mt-6 text-ocean-600">— Unsere Überzeugung</p>
+            
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              Jetzt 14 Tage gratis starten
+              <ChevronRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
     </div>
   )
 }
-

@@ -11,7 +11,12 @@ import {
   CheckCircle2,
   ChevronRight,
   Quote,
+  Sparkles,
+  Play,
+  ArrowRight,
 } from 'lucide-react'
+
+const CALENDLY_URL = 'https://calendly.com/raphaelkaiser/20min'
 
 export function Home() {
   return (
@@ -35,8 +40,13 @@ export function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 opacity-0 animate-slide-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-              <a href="#demo" className="btn-primary text-lg px-8 py-4">
-                Demo anfordern
+              <a 
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Jetzt 14 Tage gratis starten
                 <ChevronRight className="ml-2 w-5 h-5" />
               </a>
               <a href="#funktionen" className="btn-secondary text-lg px-8 py-4">
@@ -62,31 +72,100 @@ export function Home() {
             </div>
           </div>
 
-          <div className="mt-16 max-w-3xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            <div className="bg-white rounded-3xl shadow-xl shadow-ocean-900/5 p-6 sm:p-8 border border-sand-100">
+          {/* Enhanced Hero Illustration */}
+          <div className="mt-16 max-w-4xl mx-auto opacity-0 animate-slide-up" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
+            <div className="bg-white rounded-3xl shadow-2xl shadow-ocean-900/10 p-6 sm:p-8 border border-sand-100 relative overflow-hidden">
+              {/* Window chrome */}
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-3 h-3 rounded-full bg-sand-300" />
-                <div className="w-3 h-3 rounded-full bg-sage-300" />
-                <div className="w-3 h-3 rounded-full bg-ocean-300" />
+                <div className="w-3 h-3 rounded-full bg-red-400" />
+                <div className="w-3 h-3 rounded-full bg-amber-400" />
+                <div className="w-3 h-3 rounded-full bg-green-400" />
+                <div className="flex-1 mx-4">
+                  <div className="h-6 bg-sand-100 rounded-lg w-48 mx-auto" />
+                </div>
               </div>
-              <div className="grid gap-4">
-                <div className="flex items-center gap-4 p-4 bg-sage-50 rounded-2xl">
-                  <div className="w-12 h-12 bg-sage-200 rounded-xl flex items-center justify-center">
-                    <Mic className="w-6 h-6 text-sage-700" />
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Recording Panel */}
+                <div className="bg-gradient-to-br from-sage-50 to-sage-100/50 rounded-2xl p-6 border border-sage-200/50">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-sage-500 rounded-xl flex items-center justify-center">
+                        <Mic className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-ocean-900 text-sm">Sitzungsaufnahme</div>
+                        <div className="text-xs text-ocean-500">Aktiv • 23:45</div>
+                      </div>
+                    </div>
+                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
                   </div>
-                  <div className="flex-1">
-                    <div className="h-3 bg-sage-200 rounded-full w-3/4 mb-2" />
-                    <div className="h-2 bg-sage-100 rounded-full w-1/2" />
+                  
+                  {/* Waveform visualization */}
+                  <div className="flex items-center justify-center gap-1 h-16 mb-4">
+                    {[...Array(24)].map((_, i) => (
+                      <div 
+                        key={i} 
+                        className="w-1.5 bg-sage-400 rounded-full transition-all"
+                        style={{ 
+                          height: `${20 + Math.sin(i * 0.5) * 15 + Math.random() * 20}px`,
+                          opacity: 0.6 + Math.random() * 0.4
+                        }}
+                      />
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center justify-center gap-4">
+                    <button className="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center text-ocean-600 hover:bg-sage-50 transition-colors">
+                      <Play className="w-5 h-5 ml-0.5" />
+                    </button>
                   </div>
                 </div>
-                <div className="flex items-center gap-4 p-4 bg-sand-50 rounded-2xl">
-                  <div className="w-12 h-12 bg-sand-200 rounded-xl flex items-center justify-center">
-                    <FileText className="w-6 h-6 text-sand-700" />
+                
+                {/* Generated Document Panel */}
+                <div className="bg-gradient-to-br from-sand-50 to-sand-100/50 rounded-2xl p-6 border border-sand-200/50">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-sand-500 rounded-xl flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-ocean-900 text-sm">Sitzungsprotokoll</div>
+                      <div className="text-xs text-ocean-500">Automatisch erstellt</div>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="h-3 bg-sand-200 rounded-full w-2/3 mb-2" />
-                    <div className="h-2 bg-sand-100 rounded-full w-2/5" />
+                  
+                  {/* Document preview */}
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-sage-500" />
+                      <div className="h-2.5 bg-sand-300 rounded-full flex-1" />
+                    </div>
+                    <div className="pl-6 space-y-2">
+                      <div className="h-2 bg-sand-200 rounded-full w-full" />
+                      <div className="h-2 bg-sand-200 rounded-full w-4/5" />
+                      <div className="h-2 bg-sand-200 rounded-full w-11/12" />
+                    </div>
+                    <div className="flex items-center gap-2 pt-2">
+                      <Sparkles className="w-4 h-4 text-sage-500" />
+                      <div className="h-2.5 bg-sand-300 rounded-full w-32" />
+                    </div>
+                    <div className="pl-6 space-y-2">
+                      <div className="h-2 bg-sand-200 rounded-full w-full" />
+                      <div className="h-2 bg-sand-200 rounded-full w-3/4" />
+                    </div>
                   </div>
+                  
+                  <div className="mt-4 pt-4 border-t border-sand-200 flex items-center justify-between">
+                    <span className="text-xs text-ocean-500">SGB-V konform</span>
+                    <CheckCircle2 className="w-4 h-4 text-sage-500" />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Flow arrow */}
+              <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-sage-200">
+                  <ArrowRight className="w-5 h-5 text-sage-600" />
                 </div>
               </div>
             </div>
@@ -341,6 +420,7 @@ export function Home() {
         </div>
       </section>
 
+      {/* New Pricing Section */}
       <section id="preise" className="relative">
         <div className="container-max section-padding">
           <div className="text-center mb-12">
@@ -350,93 +430,83 @@ export function Home() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-4">
-              Transparent & flexibel
+              Preise, so transparent wie unsere Arbeit.
             </h2>
-            <p className="text-lg text-ocean-600 max-w-2xl mx-auto">
-              Starten Sie kostenlos und wählen Sie später das Paket, das zu Ihrer
-              Praxis passt.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-sand-100">
-              <div className="text-sm font-medium text-ocean-600 mb-2">
-                Starter
+          {/* Trust-Based Trial Promise */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <div className="bg-sage-50 rounded-2xl p-6 border border-sage-200 text-center">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sage-800">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-sage-600" />
+                  <span className="font-medium">14 Tage kostenlos testen</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-sage-600" />
+                  <span className="font-medium">Keine Kreditkarte erforderlich</span>
+                </div>
               </div>
-              <div className="flex items-baseline gap-1 mb-4">
-                <span className="text-4xl font-bold text-ocean-900">€0</span>
-                <span className="text-ocean-600">/Monat</span>
-              </div>
-              <p className="text-ocean-600 mb-6">
-                Perfekt zum Kennenlernen. Keine Kreditkarte erforderlich.
+              <p className="text-sage-700 mt-3 text-sm">
+                Testphase endet automatisch – keine Kündigung notwendig.
               </p>
-
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-ocean-700">
-                  <CheckCircle2 className="w-5 h-5 text-sage-600 flex-shrink-0" />
-                  <span>5 Sitzungen pro Monat</span>
-                </li>
-                <li className="flex items-center gap-3 text-ocean-700">
-                  <CheckCircle2 className="w-5 h-5 text-sage-600 flex-shrink-0" />
-                  <span>Automatische Protokolle</span>
-                </li>
-                <li className="flex items-center gap-3 text-ocean-700">
-                  <CheckCircle2 className="w-5 h-5 text-sage-600 flex-shrink-0" />
-                  <span>DSGVO-konforme Speicherung</span>
-                </li>
-              </ul>
-
-              <a href="#demo" className="btn-secondary w-full">
-                Kostenlos starten
-              </a>
             </div>
+          </div>
 
-            <div className="bg-gradient-to-br from-sage-600 to-sage-700 rounded-3xl p-8 shadow-xl shadow-sage-600/20 relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-white/20 rounded-full px-3 py-1 text-xs font-medium text-white">
-                Beliebt
+          {/* Single Pricing Card */}
+          <div className="max-w-lg mx-auto">
+            <div className="bg-gradient-to-br from-sage-600 to-sage-700 rounded-3xl p-8 sm:p-10 shadow-xl shadow-sage-600/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+              
+              <div className="relative z-10">
+                <div className="text-sage-100 font-medium mb-2">
+                  Praxis-Lizenz
+                </div>
+                <div className="flex items-baseline gap-2 mb-6">
+                  <span className="text-5xl font-bold text-white">99€</span>
+                  <span className="text-sage-200 text-lg">/ Monat</span>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
+                    <span>Unbegrenzte Sitzungsaufzeichnungen</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
+                    <span>Automatische Arztbriefe & Anträge</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
+                    <span>DSGVO-konforme Server in Deutschland</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
+                    <span>AVV inklusive</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-white">
+                    <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
+                    <span>Monatlich kündbar</span>
+                  </li>
+                </ul>
+
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-white text-sage-700 font-semibold rounded-full hover:bg-sand-50 transition-all duration-300 hover:shadow-lg text-lg"
+                >
+                  Jetzt 14 Tage gratis starten
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </a>
               </div>
-
-              <div className="text-sm font-medium text-sage-100 mb-2">
-                Professional
-              </div>
-              <div className="flex items-baseline gap-1 mb-4">
-                <span className="text-4xl font-bold text-white">€79</span>
-                <span className="text-sage-200">/Monat</span>
-              </div>
-              <p className="text-sage-100 mb-6">
-                Für Therapeuten, die keine Zeit verlieren wollen.
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
-                  <span>Unbegrenzte Sitzungen</span>
-                </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
-                  <span>Arztbriefe & Berichte</span>
-                </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
-                  <span>Priority Support</span>
-                </li>
-                <li className="flex items-center gap-3 text-white">
-                  <CheckCircle2 className="w-5 h-5 text-sage-300 flex-shrink-0" />
-                  <span>Individuelle Anpassungen</span>
-                </li>
-              </ul>
-
-              <a
-                href="#demo"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-white text-sage-700 font-medium rounded-full hover:bg-sand-50 transition-all duration-300 hover:shadow-lg"
-              >
-                Demo anfordern
-              </a>
             </div>
           </div>
         </div>
       </section>
 
+      {/* CTA Section */}
       <section id="demo" className="relative">
         <div className="container-max section-padding">
           <div className="bg-gradient-to-br from-sand-100 to-sand-50 rounded-3xl p-8 sm:p-12 lg:p-16 text-center relative overflow-hidden">
@@ -448,19 +518,24 @@ export function Home() {
                 Bereit für mehr Feierabend?
               </h2>
               <p className="text-lg text-ocean-600 max-w-xl mx-auto mb-8">
-                Vereinbaren Sie eine unverbindliche Demo und erleben Sie, wie
+                Starten Sie Ihre kostenlose Testphase und erleben Sie, wie
                 Sesam Ihren Praxisalltag verändern kann.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:hallo@meinsesam.de" className="btn-primary text-lg px-8 py-4">
-                  Demo anfordern
+                <a 
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary text-lg px-8 py-4"
+                >
+                  Jetzt 14 Tage gratis starten
                   <ChevronRight className="ml-2 w-5 h-5" />
                 </a>
               </div>
 
               <p className="text-sm text-ocean-500 mt-6">
-                Keine Verpflichtung • Persönliche Beratung • In 15 Minuten
+                Keine Kreditkarte • Endet automatisch • In 2 Minuten startklar
               </p>
             </div>
           </div>
@@ -499,4 +574,3 @@ export function Home() {
     </>
   )
 }
-
