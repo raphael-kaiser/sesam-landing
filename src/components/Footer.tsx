@@ -7,13 +7,12 @@ export function Footer() {
       <div className="container-max section-padding !py-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/sesam-logo-white.svg" 
+                src="/sesam-logo-text-white.png" 
                 alt="Sesam" 
                 className="h-8 w-auto"
               />
-              <span className="text-xl font-semibold text-white">Sesam</span>
             </Link>
             <p className="text-ocean-400 text-sm leading-relaxed">
               Der KI-Assistent, der Therapeuten ihre Zeit zurückgibt.

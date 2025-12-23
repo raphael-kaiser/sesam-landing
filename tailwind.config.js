@@ -53,7 +53,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Fredoka', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         '2xl': '1rem',
