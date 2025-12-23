@@ -14,9 +14,15 @@
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Fredoka', system-ui, sans-serif;
+    font-weight: 600; /* semibold instead of bold */
   }
   
-  button {
+  button, a.btn-primary, a.btn-secondary, a[class*="btn-"] {
+    font-family: 'Fredoka', system-ui, sans-serif;
+  }
+  
+  /* Also apply to links that look like buttons */
+  a[class*="rounded-full"][class*="px-"] {
     font-family: 'Fredoka', system-ui, sans-serif;
   }
 }

@@ -5,7 +5,7 @@ export function AGB() {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="mb-12">
-            <h1 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-4">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-ocean-900 mb-4">
               Allgemeine Geschäftsbedingungen
             </h1>
             <p className="text-ocean-600">

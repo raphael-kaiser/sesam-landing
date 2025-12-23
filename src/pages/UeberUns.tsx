@@ -17,7 +17,7 @@ export function UeberUns() {
               <span>Unsere Geschichte</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-ocean-900 mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-semibold text-ocean-900 mb-8 leading-tight">
               Warum wir Sesam <span className="text-sage-600">gebaut haben.</span>
             </h1>
           </div>
@@ -119,7 +119,7 @@ export function UeberUns() {
                   <Shield className="w-8 h-8 text-sage-400" />
                 </div>
 
-                <h2 className="text-3xl font-bold text-white mb-6">
+                <h2 className="text-3xl font-semibold text-white mb-6">
                   Datenschutz ist kein Feature.
                   <br />
                   <span className="text-sage-400">Er ist unsere DNA.</span>
@@ -133,13 +133,13 @@ export function UeberUns() {
 
                 <div className="grid sm:grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-sage-400 mb-2">
+                    <div className="text-2xl font-semibold text-sage-400 mb-2">
                       100%
                     </div>
                     <div className="text-ocean-300 text-sm">Made in Germany</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-sage-400 mb-2">
+                    <div className="text-2xl font-semibold text-sage-400 mb-2">
                       0%
                     </div>
                     <div className="text-ocean-300 text-sm">
@@ -147,7 +147,7 @@ export function UeberUns() {
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-sage-400 mb-2">
+                    <div className="text-2xl font-semibold text-sage-400 mb-2">
                       AVV
                     </div>
                     <div className="text-ocean-300 text-sm">Inklusive</div>

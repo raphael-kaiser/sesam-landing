@@ -26,7 +26,7 @@ export function Karriere() {
               <span>Karriere</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-ocean-900 mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-semibold text-ocean-900 mb-6 leading-tight">
               Bauen Sie mit uns die Zukunft der{' '}
               <span className="text-sage-600">psychischen Gesundheit.</span>
             </h1>
@@ -51,7 +51,7 @@ export function Karriere() {
       <section className="relative gradient-soft">
         <div className="container-max section-padding">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-ocean-900 mb-4">
+            <h2 className="text-3xl font-semibold text-ocean-900 mb-4">
               Warum Sesam?
             </h2>
             <p className="text-lg text-ocean-600">
@@ -116,7 +116,7 @@ export function Karriere() {
         <div className="container-max section-padding">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-ocean-900 mb-4">
+              <h2 className="text-3xl font-semibold text-ocean-900 mb-4">
                 Offene Positionen
               </h2>
               <p className="text-lg text-ocean-600">

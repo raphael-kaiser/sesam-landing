@@ -28,7 +28,7 @@ export function Home() {
 
         <div className="container-max section-padding relative z-10 pt-32">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ocean-900 leading-tight mb-6 animate-slide-up">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-ocean-900 leading-tight mb-6 animate-slide-up">
               Finden Sie Ihre Zeit für das{' '}
               <span className="text-sage-600">Wesentliche</span> wieder.
             </h1>
@@ -181,7 +181,7 @@ export function Home() {
               <span>Wir verstehen Sie</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-ocean-900 mb-6 leading-tight">
               Therapie ist Arbeit am Menschen.
               <br />
               <span className="text-ocean-600">
@@ -215,7 +215,7 @@ export function Home() {
               <span>Ihre Funktionen</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-ocean-900 mb-4">
               So einfach wie ein Gespräch
             </h2>
             <p className="text-lg text-ocean-600 max-w-2xl mx-auto">
@@ -293,7 +293,7 @@ export function Home() {
                 <span>Sicherheit & Datenschutz</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6 leading-tight">
                 Ihre Daten bleiben{' '}
                 <span className="text-sage-400">Ihre Daten.</span>
               </h2>
@@ -355,13 +355,13 @@ export function Home() {
               <div className="bg-ocean-900 rounded-3xl p-8 border border-ocean-800">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-ocean-800/50 rounded-2xl p-6 text-center">
-                    <div className="text-3xl font-bold text-sage-400 mb-2">
+                    <div className="text-3xl font-semibold text-sage-400 mb-2">
                       100%
                     </div>
                     <div className="text-ocean-300 text-sm">DSGVO-konform</div>
                   </div>
                   <div className="bg-ocean-800/50 rounded-2xl p-6 text-center">
-                    <div className="text-3xl font-bold text-sage-400 mb-2">
+                    <div className="text-3xl font-semibold text-sage-400 mb-2">
                       AVV
                     </div>
                     <div className="text-ocean-300 text-sm">
@@ -369,13 +369,13 @@ export function Home() {
                     </div>
                   </div>
                   <div className="bg-ocean-800/50 rounded-2xl p-6 text-center">
-                    <div className="text-3xl font-bold text-sage-400 mb-2">
+                    <div className="text-3xl font-semibold text-sage-400 mb-2">
                       ISO
                     </div>
                     <div className="text-ocean-300 text-sm">27001 Hosting</div>
                   </div>
                   <div className="bg-ocean-800/50 rounded-2xl p-6 text-center">
-                    <div className="text-3xl font-bold text-sage-400 mb-2">
+                    <div className="text-3xl font-semibold text-sage-400 mb-2">
                       FFM
                     </div>
                     <div className="text-ocean-300 text-sm">
@@ -429,7 +429,7 @@ export function Home() {
               <span>Faire Preise</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-ocean-900 mb-4">
               Preise, so transparent wie unsere Arbeit.
             </h2>
           </div>
@@ -464,7 +464,7 @@ export function Home() {
                   Praxis-Lizenz
                 </div>
                 <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-5xl font-bold text-white">99€</span>
+                  <span className="text-5xl font-semibold text-white">99€</span>
                   <span className="text-sage-200 text-lg">/ Monat</span>
                 </div>
 
@@ -514,7 +514,7 @@ export function Home() {
             <div className="organic-shape w-48 h-48 bg-ocean-200 opacity-20 -bottom-10 -left-10" />
 
             <div className="relative z-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-ocean-900 mb-4">
                 Bereit für mehr Feierabend?
               </h2>
               <p className="text-lg text-ocean-600 max-w-xl mx-auto mb-8">
@@ -550,7 +550,7 @@ export function Home() {
               <span>Über uns</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-ocean-900 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-ocean-900 mb-6">
               Gebaut von Menschen, die verstehen
             </h2>
 

@@ -11,7 +11,7 @@ export function Impressum() {
                 <FileText className="w-4 h-4" />
                 <span>Rechtliches</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl font-bold text-ocean-900">
+              <h1 className="text-4xl sm:text-5xl font-semibold text-ocean-900">
                 Impressum
               </h1>
             </div>
